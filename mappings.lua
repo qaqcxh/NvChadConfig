@@ -10,21 +10,15 @@ M.general = {
     ["<C-w>j"] = { ":rightbelow split <CR>", "split window to bottom" },
     ["<C-w>l"] = { ":rightbelow vsplit <CR>", "split window to right" },
     -- 关闭窗口
-    ["q"] = { ": <ESC>:close <CR>", "close window"},
+    ["q"] = { ": <ESC>:close <CR>", "close window", opts = { silent = true } },
     -- 使用回车打开关闭折叠
     ["<CR>"] = { "za", "open fold with enter" },
     -- 将:替换成;
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     -- 使用Q进行宏录制
     ["Q"] = { "q", "use Q to record macro" },
-
-    -- 利用LSP搜索符号
-    ["<leader>s"] = {
-      function()
-        vim.lsp.buf.workspace_symbol()
-      end,
-      "LSP workspace symbol",
-    },
+    -- jk 快速退出
+    ["jk"] = { "<ESC>", "quick escape" },
   },
 
   v = {
