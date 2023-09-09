@@ -43,13 +43,13 @@ local plugins = {
   },
 
   -- Install a plugin
-  {
-    "max397572/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("better_escape").setup()
+  --   end,
+  -- },
 
   {
     "lervag/vimtex",
@@ -57,7 +57,12 @@ local plugins = {
     config = function()
       require("custom.configs.vimtex").setup()
     end,
-  }
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    lazy = false,
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

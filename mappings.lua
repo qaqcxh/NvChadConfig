@@ -17,18 +17,28 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     -- 使用Q进行宏录制
     ["Q"] = { "q", "use Q to record macro" },
-    -- jk 快速退出
-    ["jk"] = { "<ESC>", "quick escape" },
   },
 
   v = {
     -- 关闭窗口
     ["q"] = { ": <ESC>:close <CR>", "close window"},
   },
+
+  i = {
+    -- jk 快速退出
+    ["jk"] = { "<ESC>", "quick escape" },
+  }
 }
 
 M.lspconfig = {
+  plugin = true,
   n = {
+    -- 查找定义
+    ["gd"] = {
+      function()
+        require("telescope.builtin").lsp_definitions({ fname_width = 100, reuse_win = true })
+      end
+    },
     -- 查找引用
     ["gr"] = {
       function()
@@ -39,7 +49,7 @@ M.lspconfig = {
     -- 查找全局符号
     ["gs"] = {
       function()
-        require("telescope.builtin").lsp_workspace_symbols({ fname_width = 100 })
+        require("telescope.builtin").lsp_dynamic_workspace_symbols({ fname_width = 100 })
       end,
     }
   }
