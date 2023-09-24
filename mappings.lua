@@ -33,6 +33,19 @@ M.general = {
 M.lspconfig = {
   plugin = true,
   n = {
+    -- 查找基类的继承类或者虚函数具化实现
+    ["gi"] = {
+      function()
+        require("telescope.builtin").lsp_implementations({ show_line = false })
+      end,
+      "LSP implementation",
+    },
+    ["gD"] = {
+      function()
+        require("telescope.builtin").lsp_type_definitions()
+      end,
+      "LSP definition type",
+    },
     -- 查找定义
     ["gd"] = {
       function()
