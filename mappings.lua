@@ -49,7 +49,7 @@ M.lspconfig = {
     -- 查找定义
     ["gd"] = {
       function()
-        require("telescope.builtin").lsp_definitions({ fname_width = 100, reuse_win = true })
+        require("telescope.builtin").lsp_definitions({ fname_width = 100 })
       end
     },
     -- 查找引用
