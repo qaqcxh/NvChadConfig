@@ -64,7 +64,23 @@ M.lspconfig = {
       function()
         require("telescope.builtin").lsp_dynamic_workspace_symbols({ fname_width = 100 })
       end,
-    }
+    },
+    -- format代码
+    ["<leader>fm"] = {
+      function()
+        require("conform").format({ async = true, lsp_fallback = true })
+      end,
+      "LSP formatting",
+    },
+  },
+  v = {
+    -- format代码
+    ["<leader>fm"] = {
+      function()
+        require("conform").format({ async = true, lsp_fallback = true })
+      end,
+      "LSP formatting",
+    },
   }
 }
 

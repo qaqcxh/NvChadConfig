@@ -16,6 +16,13 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
+  {
+    "stevearc/conform.nvim",
+    opts = function()
+      require "custom.configs.conform"
+    end,
+  },
+
   -- override plugin configs
   -- {
   --   "nvim-telescope/telescope.nvim",
