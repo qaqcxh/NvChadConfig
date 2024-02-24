@@ -22,11 +22,14 @@ vim.diagnostic.config({
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html",
-  "cssls",
-  "tsserver",
+  -- "html",
+  -- "cssls",
+  -- "tsserver",
   "clangd",
+  "pyright",
   "cmake",
+  "bashls",
+  "lua_ls",
 }
 
 for _, lsp in ipairs(servers) do

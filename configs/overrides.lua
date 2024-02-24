@@ -8,6 +8,7 @@ M.treesitter = {
     "cpp",
     "java",
     "python",
+    "cuda",
     "vim",
     "lua",
     "html",
@@ -28,14 +29,14 @@ M.mason = {
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
-    "stylua",
+    -- "stylua",
 
     -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
+    -- "css-lsp",
+    -- "html-lsp",
+    -- "typescript-language-server",
+    -- "deno",
+    -- "prettier",
 
     -- c/cpp stuff
     "clangd",
@@ -43,6 +44,15 @@ M.mason = {
 
     -- cmake stuff
     "cmake-language-server",
+    "bash-language-server",
+
+    -- python
+    "pyright",
+
+    -- latex
+    -- "ltex-ls",
+    -- "latexindent",
+    -- "texlab",
   },
 }
 
