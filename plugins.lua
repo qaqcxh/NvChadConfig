@@ -50,13 +50,13 @@ local plugins = {
   },
 
   -- Install a plugin
-  {
-    "lervag/vimtex",
-    ft = "tex",
-    config = function()
-      require("custom.configs.vimtex").setup()
-    end,
-  },
+  -- {
+  --   "lervag/vimtex",
+  --   ft = "tex",
+  --   config = function()
+  --     require("custom.configs.vimtex").setup()
+  --   end,
+  -- },
 
   -- {
   --   "numToStr/Comment.nvim",

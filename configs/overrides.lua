@@ -50,9 +50,8 @@ M.mason = {
     "pyright",
 
     -- latex
-    -- "ltex-ls",
-    -- "latexindent",
-    -- "texlab",
+    "latexindent",
+    "texlab",
   },
 }
 
