@@ -31,6 +31,7 @@ local servers = {
   "bashls",
   "lua_ls",
   "texlab",
+  "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do
